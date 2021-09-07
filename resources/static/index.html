@@ -27,7 +27,6 @@
                     <li class="nav-item" ng-show="isUserLoggedIn()">
                         <a class="nav-link" href="#!/create_product">(Служебная функция) Создать товар</a>
                     </li>
-
                     <li class="nav-item" ng-show="!isUserLoggedIn()">
                         <form class="align-middle" ng-submit="tryToAuth()">
                             <div class="input-group input-group-sm" style="padding: 4px;">
@@ -40,12 +39,17 @@
                                 <button id="navLoginSubmit" class="btn btn-outline-warning btn-sm"
                                         style="margin-left: 10px;" type="submit">Войти
                                 </button>
+
                             </div>
                         </form>
                     </li>
                     <li class="nav-item" ng-show="isUserLoggedIn()" style="padding: 4px;">
                         <button class="btn btn-outline-secondary btn-sm" ng-click="tryToLogout()">Выйти</button>
                     </li>
+                    <li class="nav-item"  ng-hide="isUserLoggedIn()">
+                        <a class="nav-link" href="#!/create_user">Регистрация</a>
+                    </li>
+
                 </ul>
             </div>
         </nav>
@@ -58,6 +62,8 @@
     <script src="welcome/welcome.js"></script>
     <script src="edit_product/edit_product.js"></script>
     <script src="create_product/create_product.js"></script>
+    <script src="create_user/create_user.js"></script>
+
 </div>
 </body>
 </html>

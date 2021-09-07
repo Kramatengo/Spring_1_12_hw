@@ -1,0 +1,13 @@
+<div>
+    <p></p>
+    <h3>Введите данные пользователя</h3>
+    <form novalidate ng-submit="createUser()">
+        <input class="form-control" type="text" placeholder="Имя" ng-model="new_user.username">
+        <p></p>
+        <input class="form-control" type="text" placeholder="Пароль" ng-model="new_user.password">
+        <p></p>
+        <input class="form-control" type="text" placeholder="e-mail" ng-model="new_user.email">
+        <p></p>
+        <button type="submit" class="btn btn-primary">Создать</button>
+    </form>
+</div>
