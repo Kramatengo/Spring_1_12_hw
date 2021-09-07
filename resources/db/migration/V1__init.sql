@@ -1,6 +1,6 @@
 create table categories
 (
-    id    bigserial primary key,
+    id bigserial primary key,
     title varchar(255)
 );
 insert into categories (title)
@@ -8,37 +8,37 @@ values ('Food');
 
 create table products
 (
-    id          bigserial primary key,
+    id bigserial primary key,
     title       varchar(255),
     price       int,
     category_id bigint references categories (id)
 );
 insert into products (title, price, category_id)
-values ('Bread', 25, 1),
-       ('Milk', 80, 1),
-       ('Cheese', 450, 1),
-       ('Cheese1', 450, 1),
-       ('Cheese2', 450, 1),
-       ('Cheese3', 450, 1),
-       ('Cheese4', 450, 1),
-       ('Cheese5', 450, 1),
-       ('Cheese6', 450, 1),
-       ('Cheese7', 450, 1),
-       ('Cheese8', 450, 1),
-       ('Cheese9', 450, 1),
-       ('Cheese10', 450, 1),
-       ('Cheese11', 450, 1),
-       ('Cheese12', 450, 1),
-       ('Cheese13', 450, 1),
-       ('Cheese14', 450, 1),
-       ('Cheese15', 450, 1),
-       ('Cheese16', 450, 1),
-       ('Cheese17', 450, 1),
-       ('Cheese18', 450, 1);
+values ('Milk', 85, 1),
+       ('Bread', 20, 1),
+       ('Cheese', 100, 1),
+       ('Butter', 50, 1),
+       ('Mayonnaise', 80, 1),
+       ('Olive oil', 35, 1),
+       ('Sunflower oil', 25, 1),
+       ('Сhicken', 300, 1),
+       ('Apple', 67, 1),
+       ('Orange', 84, 1),
+       ('Flour', 137, 1),
+       ('Pork', 430, 1),
+       ('Beef', 520, 1),
+       ('Lamb', 620, 1),
+       ('Pineapple', 124, 1),
+       ('Banana', 43, 1),
+       ('Rice', 54, 1),
+       ('Buckwheat', 138, 1),
+       ('Cabbage', 24, 1),
+       ('Potato', 12, 1),
+       ('Sugar', 37, 1);
 
 create table users
 (
-    id         bigserial primary key,
+    id bigserial primary key,
     username   varchar(30) not null,
     password   varchar(80) not null,
     email      varchar(50) unique,
@@ -48,7 +48,7 @@ create table users
 
 create table roles
 (
-    id         bigserial primary key,
+    id bigserial primary key,
     name       varchar(50) not null,
     created_at timestamp default current_timestamp,
     updated_at timestamp default current_timestamp
